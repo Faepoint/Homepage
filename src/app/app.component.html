@@ -1,8 +1,19 @@
-<img
-  src="assets/img/faepoint_logo.png"
-  class="absolute top-0 left-0 p-2 max-w-20 duration-300 hover:cursor-pointer hover:max-w-24"
-  alt="Faepoint Software Logo - a minimalist elf ear on a purple background."
-  [routerLink]="['/']" />
+<nav class="flex p-1 md:p-3">
+  <img
+    src="assets/img/faepoint_logo.png"
+    class="flex-initial self-center p-2 max-w-20 hover:cursor-pointer"
+    alt="Faepoint Software Logo - a minimalist elf ear on a purple background."
+    [routerLink]="['/']" />
+  <ul class="p-1 md:p-3 self-center font-stifly text-timberwolf text-xl">
+    <li class="inline p-1 mr-3 hover:underline hover:cursor-pointer hover:text-green active:text-purple" [routerLink]="['/under-construction']">
+      Templates
+    </li>
+    <li class="inline p-1 hover:underline hover:cursor-pointer hover:text-green active:text-purple" [routerLink]="['/under-construction']">
+      Contact
+    </li>
+  </ul>
+  <div class="flex-auto"></div>
+</nav>
 
 <div class="flex flex-col h-full">
   <section class="flex-auto grow shrink">
@@ -10,7 +21,4 @@
       <router-outlet></router-outlet>
     </div>
   </section>
-  <!-- <footer class="grow-0 shrink basis-4">
-    <p class="bg-red-900 p-3">Footer</p>
-  </footer> -->
 </div>
