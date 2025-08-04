@@ -5,9 +5,7 @@
     alt="Faepoint Software Logo - a minimalist elf ear on a purple background."
     [routerLink]="['/']" />
   <ul class="p-1 md:p-3 self-center font-stifly text-timberwolf text-xl">
-    <li class="inline p-1 mr-3 hover:underline hover:cursor-pointer hover:text-green active:text-purple" [routerLink]="['/under-construction']">
-      Templates
-    </li>
+    <li class="inline p-1 mr-3 hover:underline hover:cursor-pointer hover:text-green active:text-purple" [routerLink]="['/templates']">Templates</li>
     <li class="inline p-1 hover:underline hover:cursor-pointer hover:text-green active:text-purple" [routerLink]="['/under-construction']">
       Contact
     </li>
@@ -15,10 +13,4 @@
   <div class="flex-auto"></div>
 </nav>
 
-<div class="flex flex-col h-full">
-  <section class="flex-auto grow shrink">
-    <div class="h-full">
-      <router-outlet></router-outlet>
-    </div>
-  </section>
-</div>
+<router-outlet></router-outlet>
