@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+tr {
+  @apply rounded-md;
+}
+
+td:first-child {
+  @apply text-left;
+}
+
+td {
+  @apply p-1 rounded-md;
+}

@@ -1,0 +1,159 @@
+<div class="bg-timberwolf p-3 rounded-md shadow-sm mx-3 font-spartan md:mx-auto md:max-w-3xl">
+  <h1 class="font-stifly text-3xl mt-2 text-center">Pricing</h1>
+  <p class="text-center my-3">
+    Prices are
+    <strong>project-based</strong>
+    and
+    <strong>transparent</strong>
+    &mdash; we don't do hidden fees.
+  </p>
+
+  <div class="w-fit ml-auto my-5">
+    <button
+      class="{{
+        selected === 0 ? 'bg-purple text-timberwolf hover:brightness-115 active:brightness-75' : 'bg-black/10 hover:bg-black/5 active:bg-black/15'
+      }} px-3 py-2 rounded-tl-md rounded-bl-md hover:cursor-pointer"
+      (click)="selected = 0">
+      Websites
+    </button>
+    <button
+      class="{{
+        selected === 1 ? 'bg-purple text-timberwolf hover:brightness-115 active:brightness-75' : 'bg-black/10 hover:bg-black/5 active:bg-black/15'
+      }} px-3 py-2 rounded-tr-md rounded-br-md hover:cursor-pointer"
+      (click)="selected = 1">
+      Consulting
+    </button>
+  </div>
+
+  <!-- Websites -->
+  @if (selected === 0) {
+  <h2 class="font-stifly text-2xl mt-5 text-center">Website Pricing</h2>
+  <p class="text-center mb-2 text-sm">General costs for planning, designing, and building your new website.</p>
+
+  <div class="border-2 w-full p-3 rounded-md">
+    <table class="w-full text-center">
+      <thead class="md:text-lg">
+        <tr>
+          <td></td>
+          <td><strong>Template Project</strong></td>
+          <td><strong>Custom Project</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg"><strong>Setup Charge</strong></td>
+          <td>$75</td>
+          <td>$120</td>
+        </tr>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg"><strong>Domain Cost</strong></td>
+          <td colspan="2" class="text-center">Market ($10 - $50 /year typical)</td>
+        </tr>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg"><strong>Planning & Development</strong></td>
+          <td colspan="2" class="text-center">$30 /hour</td>
+        </tr>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg">
+            <strong>Follow-Up Requests</strong>
+            <span class="text-sm ml-1">(post-completion)</span>
+          </td>
+          <td colspan="2" class="text-center">$35 /hour</td>
+        </tr>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg"><strong>In-Warranty Maintenance</strong></td>
+          <td colspan="2" class="text-center">$0 /hour</td>
+        </tr>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg">
+            <strong>Server Fee</strong>
+            <span class="text-sm ml-1">(if needed)</span>
+          </td>
+          <td colspan="2" class="text-center">$30+ /month</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="text-center mt-5 text-sm">Web server costs vary greatly. Contact us for a quote to see if one is needed for your project.</p>
+  </div>
+
+  <h2 class="font-stifly text-2xl mt-10 text-center">Warranty</h2>
+  <p class="text-center text-sm">
+    Every project delivered is backed by the
+    <strong>Faepoint Limited Warranty.</strong>
+    This warranty covers free basic service upkeep and corrections as outlined below:
+  </p>
+
+  <div class="md:flex">
+    <div class="flex-1 self-start p-3 m-1 rounded-md text-timberwolf bg-purple">
+      <h3 class="font-stifly text-xl">First Three Months</h3>
+      <ul class="list-disc list-inside">
+        <li>Mistake Corrections</li>
+        <li>Design Tweaks</li>
+      </ul>
+    </div>
+    <div class="flex-1 self-start p-3 m-1 rounded-md text-timberwolf bg-purple">
+      <h3 class="font-stifly text-xl">First Year</h3>
+      <ul class="list-disc list-inside">
+        <li>Bugs and Security Fixes</li>
+        <li>Software Updates</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="p-3 m-1 rounded-md text-timberwolf bg-purple">
+    <h3 class="font-stifly text-xl">Lifetime</h3>
+    <ul class="list-disc list-inside columns-2">
+      <li>Server Management</li>
+      <li>Support</li>
+    </ul>
+  </div>
+
+  } @else {
+  <h2 class="font-stifly text-2xl mt-5 text-center">Consulting Services</h2>
+  <p class="text-center mb-2 text-sm">Costs for meeting with you and providing advice and recommendations.</p>
+
+  <div class="border-2 w-full p-3 rounded-md">
+    <table class="w-full text-center">
+      <thead class="md:text-lg">
+        <tr>
+          <td></td>
+          <td><strong>Price</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg"><strong>Flat Fee</strong></td>
+          <td>$100</td>
+        </tr>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg"><strong>Website Design Consultation</strong></td>
+          <td colspan="2" class="text-center">$25 /hour</td>
+        </tr>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg"><strong>Technical Assessment</strong></td>
+          <td colspan="2" class="text-center">$30 /hour</td>
+        </tr>
+        <tr class="even:bg-purple/25">
+          <td class="md:text-lg">
+            <strong>Accessibility Screening</strong>
+          </td>
+          <td colspan="2" class="text-center">$25 /hour</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="text-center mt-5 text-sm">
+      Consultations are intended to provide advice and recommendations for improvements to your existing application or website. This advice is based
+      on industry standards and guidelines for accessibility and users' expectations.
+    </p>
+  </div>
+  }
+
+  <h2 class="font-stifly text-2xl mt-10 text-center">Price Disclaimer</h2>
+  <p class="text-sm">
+    Because every project is unique, pricing may vary based on several factors - including, but not limited to: complexity, cost of infrastructure and
+    vendor products, deadlines, and technical requirements. Contact us for a quote for your project's specific needs. All prices shown are in USD. We
+    proudly do not use AI.
+  </p>
+</div>
