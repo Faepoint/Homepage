@@ -16,7 +16,7 @@ export const routes: Routes = [
     component: ConstructionComponent
   },
   {
-    path: 'templates',
+    path: 'portfolio',
     component: TemplatesComponent
   },
   {
