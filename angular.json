@@ -16,11 +16,20 @@
             "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/assets", "src/CNAME"],
-            "styles": ["src/styles.css"],
-            "scripts": ["node_modules/emoji-toolkit/lib/js/joypixels.min.js"]
+            "assets": [
+              "src/assets",
+              "src/CNAME"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,11 +77,20 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
-            "assets": ["src/assets"],
-            "styles": ["src/styles.css"],
-            "scripts": ["node_modules/emoji-toolkit/lib/js/joypixels.min.js"]
+            "assets": [
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
+            ]
           }
         }
       }

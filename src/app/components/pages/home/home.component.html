@@ -1,5 +1,58 @@
-<img src="assets/img/faepoint_title.png" class="max-w-screen md:max-w-xl mx-auto drop-shadow-lg" />
-<h2 class="text-2xl md:text-3xl text-center font-stifly text-timberwolf">
-  {{ typedHeader | async }}
-  <span class="animate-ping">|</span>
-</h2>
+<div class="h-[30svh] md:h-[35svh] text-center">
+  <div class="relative top-1/2 -translate-y-1/2">
+    <img src="assets/img/faepoint_logo_tp.png" class="max-w-[12rem] md:max-w-3xs mx-auto" />
+    <h1 class="text-3xl md:text-4xl font-stifly text-offblack">
+      {{ typedHeader | async }}
+      <span class="animate-ping">|</span>
+    </h1>
+  </div>
+</div>
+
+<fp-hero-panel [slantTop]="true" [slantBottom]="true" [wavesBottom]="false" [classes]="'bg-gray-50'">
+  <div class="text-center mb-7">
+    <h2 class="text-3xl md:text-4xl font-stifly mb-1">Alakazam!</h2>
+    <p class="font-thin text-lg">Delivering technology that works like magic.</p>
+  </div>
+  <div class="w-fit mx-auto font-spartan text-purple">
+    <!-- Determined Ownership  -->
+    <p class="my-2">
+      <strong>Driven</strong>
+      &ndash; In a marketplace where cutting corners is commonplace, we're aiming higher than
+      <em>just good enough.</em>
+    </p>
+
+    <p class="my-2">
+      <strong>Resilient</strong>
+      &ndash; Backed by years of experience in the software industry.
+    </p>
+
+    <p class="my-2">
+      <strong>Original</strong>
+      &ndash; We're building practical systems that solve real problems &ndash; with a touch of flair.
+    </p>
+
+    <p class="my-2">
+      <strong>Work-ready</strong>
+      &ndash; Led by your vision and checked against our high quality standards.
+    </p>
+  </div>
+</fp-hero-panel>
+
+<div class="w-fit mx-auto my-8">
+  <div class="text-center mb-7">
+    <h2 class="text-3xl md:text-4xl font-stifly mb-1">Portfolio</h2>
+    <p class="font-thin text-lg">Consult our wizardly archive.</p>
+  </div>
+
+  <p class="font-spartan">
+    We believe the best way to evaluate our work is to experience it yourself. Visit our
+    <em>enchanting</em>
+    portfolio to see some of our recent projects.
+  </p>
+
+  <div class="w-fit mx-auto mt-5">
+    <fp-button [type]="'submit'" (clicked)="navigatePortfolio()"><p>Browse Portfolio</p></fp-button>
+  </div>
+</div>
+
+<fp-footer classes="bg-purple text-timberwolf"></fp-footer>

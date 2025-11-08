@@ -1,15 +1,15 @@
-<nav class="flex p-1 md:p-3">
-  <img
-    src="assets/img/faepoint_logo.png"
-    class="flex-initial self-center p-2 max-w-20 hover:cursor-pointer"
-    alt="Faepoint Software Logo - a minimalist elf ear on a purple background."
-    [routerLink]="['/']" />
-  <ul class="p-1 md:p-3 self-center font-stifly text-timberwolf text-xl">
-    <li class="inline p-1 mr-3 hover:underline hover:cursor-pointer hover:text-green active:text-purple" [routerLink]="['/portfolio']">Portfolio</li>
-    <li class="inline p-1 mr-3 hover:underline hover:cursor-pointer hover:text-green active:text-purple" [routerLink]="['/pricing']">Pricing</li>
-    <li class="inline p-1 hover:underline hover:cursor-pointer hover:text-green active:text-purple" [routerLink]="['/under-construction']">
-      Contact
-    </li>
+<nav class="md:flex p-1 bg-gray-50 shadow-sm">
+  <div class="flex-initial flex hover:cursor-pointer" [routerLink]="['/']">
+    <img
+      src="assets/img/faepoint_logo_tp.png"
+      class="inline-block self-center mr-2 max-w-12 md:max-w-20"
+      alt="Faepoint Software Logo - a minimalist elf ear." />
+    <h1 class="font-stifly inline-block text-3xl md:text-5xl text-offblack self-center pr-3 md:border-r-3 border-offblack">Faepoint</h1>
+  </div>
+  <ul class="hidden md:block ml-3 w-fit mx-auto self-center font-stifly text-green text-xl">
+    <li class="inline p-1 mr-3 hover:underline hover:cursor-pointer active:text-purple" [routerLink]="['/portfolio']">Portfolio</li>
+    <li class="inline p-1 mr-3 hover:underline hover:cursor-pointer active:text-purple" [routerLink]="['/pricing']">Pricing</li>
+    <li class="inline p-1 hover:underline hover:cursor-pointer active:text-purple" [routerLink]="['/under-construction']">Contact</li>
   </ul>
   <div class="flex-auto"></div>
 </nav>
