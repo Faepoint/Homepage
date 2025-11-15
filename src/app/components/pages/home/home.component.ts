@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FpButton, FpFooter, FpHeroPanel, FpTypewriterService } from '@faepoint/fp-uilib';
+import { FpButton, FpHeroPanel, FpTypewriterService } from '@faepoint/fp-uilib';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, FpHeroPanel, FpButton, FpFooter],
+  imports: [CommonModule, FpHeroPanel, FpButton],
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
