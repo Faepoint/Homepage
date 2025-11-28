@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build -c=production",
+    "start": "npm run build-css && ng serve",
+    "build-css": "tailwindcss -i ./src/tailwind.css -o ./src/generated-tailwind.css --minify",
+    "build": "npm run build-css && ng build -c=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -22,13 +23,14 @@
     "@ngrx/effects": "^20.0.0",
     "@ngrx/store": "^20.0.0",
     "@ngrx/store-devtools": "^20.0.0",
+    "@tailwindcss/cli": "^4.1.17",
     "@tailwindcss/postcss": "^4.0.6",
     "animate.css": "^4.1.1",
     "emoji-toolkit": "^9.0.1",
     "marked": "^15.0.7",
     "postcss": "^8.5.2",
     "rxjs": "~7.8.0",
-    "tailwindcss": "^4.0.6",
+    "tailwindcss": "^4.1.17",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

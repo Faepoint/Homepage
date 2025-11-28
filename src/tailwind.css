@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@config "../tailwind.config.js";
+
+@theme {
+  --font-stifly: 'Stifly', 'sans-serif';
+  --font-spartan: 'League Spartan', sans-serif;
+  --font-thin: 'Scope One', 'serif';
+
+  --color-black-olive-500: #353d2f;
+  --color-timberwolf-100: #e4dfda;
+  --color-kelley-green-300: #55ad32;
+  --color-pomp-purple-400: #715180;
+  --color-thistle-50: #c6b9cd;
+  --color-offblack: #1e1e1e;
+}
+
+@theme inline {
+  --color-dark-green: var(--color-black-olive-500);
+  --color-timberwolf: var(--color-timberwolf-100);
+  --color-green: var(--color-kelley-green-300);
+  --color-purple: var(--color-pomp-purple-400);
+  --color-light-purple: var(--color-thistle-50);
+
+  --color-fp-ui-focus-outline: var(--color-thistle-50);
+  --color-fp-ui-button-submit-bg-normal: var(--color-pomp-purple-400);
+  --color-fp-ui-button-submit-text-normal: var(--color-timberwolf-100);
+  --color-fp-ui-button-submit-bg-disabled: var(--color-gray-400);
+  --color-fp-ui-button-submit-text-disabled: var(--color-offblack);
+}

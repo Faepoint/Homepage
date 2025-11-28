@@ -25,7 +25,8 @@
               "src/CNAME"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/generated-tailwind.css"
             ],
             "scripts": [
               "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
@@ -86,7 +87,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/generated-tailwind.css"
             ],
             "scripts": [
               "node_modules/emoji-toolkit/lib/js/joypixels.min.js"

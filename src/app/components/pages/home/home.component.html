@@ -44,13 +44,14 @@
     <p class="font-thin text-lg">Consult our wizardly archive.</p>
   </div>
 
-  <p class="font-spartan">
+  <p class="font-spartan mx-3">
     We believe the best way to evaluate our work is to experience it yourself. Visit our
     <em>enchanting</em>
     portfolio to see some of our recent projects.
   </p>
 
   <div class="w-fit mx-auto mt-5">
+    <fp-button [type]="'submit'" (clicked)="navigateProducts()"><p>View Products</p></fp-button>
     <fp-button [type]="'submit'" (clicked)="navigatePortfolio()"><p>Browse Portfolio</p></fp-button>
   </div>
 </div>
