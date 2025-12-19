@@ -24,10 +24,6 @@
               "src/assets",
               "src/CNAME"
             ],
-            "styles": [
-              "src/styles.css",
-              "src/generated-tailwind.css"
-            ],
             "scripts": [
               "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
             ]
@@ -47,12 +43,20 @@
                 }
               ],
               "fileReplacements": [],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "styles": [
+                "src/styles.css",
+                "src/generated-tailwind.css"
+              ]
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "styles": [
+                "src/styles.css",
+                "src/tailwind.css"
+              ]
             }
           },
           "defaultConfiguration": "production"
