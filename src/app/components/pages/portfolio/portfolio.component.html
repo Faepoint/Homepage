@@ -1,59 +1,61 @@
-<div class="mt-10 bg-gray-50 p-5 rounded-md shadow-lg font-spartan text-offblack w-full lg:w-fit mx-auto">
-  <img src="assets/img/faepoint_header.png" class="max-w-3xs mx-auto mb-7" alt="The Faepoint logo featuring a pointed Elf ear." />
-  <h1 class="text-4xl font-bold text-center mb-5">Portfolio</h1>
-  <section class="max-w-3xl">
-    <p>
-      This is a small sampling of public projects and templates Faepoint. We are thrilled to share our work with you, and there's much more behind the
-      counter for your next project. If you like what you see below, get in touch with our team for a quote!
-    </p>
-  </section>
-</div>
+<div class="block min-h-screen">
+  <div class="mt-10 bg-gray-50 p-5 rounded-md shadow-lg font-spartan text-offblack w-full lg:w-fit mx-auto">
+    <img src="assets/img/faepoint_header.png" class="max-w-3xs mx-auto mb-7" alt="The Faepoint logo featuring a pointed Elf ear." />
+    <h1 class="text-4xl font-bold text-center mb-5">Portfolio</h1>
+    <section class="max-w-3xl">
+      <p>
+        This is a small sampling of public projects and templates by Faepoint. We are thrilled to share our work with you, and there's much more
+        behind the counter for your next project. If you like what you see below, get in touch with our team for a quote!
+      </p>
+    </section>
+  </div>
 
-<div class="my-10 lg:my-20 max-w-6xl mx-auto">
-  <h1 class="text-3xl lg:text-5xl my-5 font-stifly text-offblack bg-gray-50 lg:bg-transparent text-center lg:w-fit rounded-md p-5">
-    Website Templates
-  </h1>
+  <div class="my-10 lg:my-20 max-w-6xl mx-auto">
+    <h1 class="text-3xl lg:text-5xl my-5 font-stifly text-offblack bg-gray-50 lg:bg-transparent text-center lg:w-fit rounded-md p-5">
+      Website Templates
+    </h1>
 
-  <div class="w-fit mx-auto">
-    <div class="block lg:inline-block">
-      <fp-hanger
-        [classes]="
-          'bg-purple max-w-sm mx-3 mb-3 transition-all hover:-translate-y-0.5 hover:cursor-pointer hover:brightness-110 active:translate-y-1 active:brightness-75'
-        "
-        (click)="openLink('https://templates.faepoint.com/cookies')">
-        <h1 class="font-stifly text-3xl mt-6 text-center text-timberwolf">Boutique Homepage</h1>
-        <img
-          src="assets/img/template_thumbnails/cookies.png"
-          class="mt-5 w-full max-w-80 rounded-md mx-auto"
-          alt="A thumbnail image of a boutique bakery homepage" />
-        <div class="bg-gray-50 shadow-sm mt-5 p-5 rounded-md text-left">
-          <p class="font-spartan">
-            A colorful and playful template showcasing a boutique cookie shop. Attract customers with an easy
-            <abbr title="Call To Action">CTA</abbr>
-            , plus all the easy marketing material available down below.
-          </p>
-        </div>
-      </fp-hanger>
-    </div>
+    <div class="w-fit mx-auto">
+      <div class="block lg:inline-block">
+        <fp-hanger
+          [classes]="
+            'bg-purple max-w-sm mx-3 mb-3 transition-all hover:-translate-y-0.5 hover:cursor-pointer hover:brightness-110 active:translate-y-1 active:brightness-75'
+          "
+          (click)="openLink('https://templates.faepoint.com/cookies')">
+          <h1 class="font-stifly text-3xl mt-6 text-center text-timberwolf">Boutique Homepage</h1>
+          <img
+            src="assets/img/template_thumbnails/cookies.png"
+            class="mt-5 w-full max-w-80 rounded-md mx-auto"
+            alt="A thumbnail image of a boutique bakery homepage" />
+          <div class="bg-gray-50 shadow-sm mt-5 p-5 rounded-md text-left">
+            <p class="font-spartan">
+              A colorful and playful template showcasing a boutique cookie shop. Attract customers with an easy
+              <abbr title="Call To Action">CTA</abbr>
+              , plus all the easy marketing material available down below.
+            </p>
+          </div>
+        </fp-hanger>
+      </div>
 
-    <div class="block lg:inline-block">
-      <fp-hanger
-        [classes]="
-          'bg-green max-w-sm mx-3 mb-3 transition-all hover:-translate-y-0.5 hover:cursor-pointer hover:brightness-110 active:translate-y-1 active:brightness-75'
-        "
-        (click)="openLink('https://templates.faepoint.com/wedding')">
-        <h1 class="font-stifly text-3xl mt-6 text-center text-timberwolf">Wedding Site</h1>
-        <img
-          src="assets/img/template_thumbnails/wedding.png"
-          class="mt-5 w-full max-w-80 rounded-md mx-auto"
-          alt="A thumbnail image of a couple's wedding announcement webpage" />
-        <div class="bg-gray-50 shadow-sm mt-5 p-5 rounded-md text-left">
-          <p class="font-spartan">
-            An elegant page to share details about an upcoming wedding or event. Your photo greets visitors, while important details are included
-            below.
-          </p>
-        </div>
-      </fp-hanger>
+      <div class="block lg:inline-block">
+        <fp-hanger
+          [classes]="
+            'bg-green max-w-sm mx-3 mb-3 transition-all hover:-translate-y-0.5 hover:cursor-pointer hover:brightness-110 active:translate-y-1 active:brightness-75'
+          "
+          (click)="openLink('https://templates.faepoint.com/wedding')">
+          <h1 class="font-stifly text-3xl mt-6 text-center text-timberwolf">Wedding Site</h1>
+          <img
+            src="assets/img/template_thumbnails/wedding.png"
+            class="mt-5 w-full max-w-80 rounded-md mx-auto"
+            alt="A thumbnail image of a couple's wedding announcement webpage" />
+          <div class="bg-gray-50 shadow-sm mt-5 p-5 rounded-md text-left">
+            <p class="font-spartan">
+              An elegant page to share details about an upcoming wedding or event. Your photo greets visitors, while important details are included
+              below.
+            </p>
+          </div>
+        </fp-hanger>
+      </div>
     </div>
   </div>
 </div>
