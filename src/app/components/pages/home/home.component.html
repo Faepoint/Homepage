@@ -53,8 +53,36 @@
     </p>
 
     <div class="w-fit mx-auto mt-5">
-      <fp-button [type]="'submit'" (clicked)="navigateProducts()"><p>View Products</p></fp-button>
-      <fp-button [type]="'submit'" (clicked)="navigatePortfolio()"><p>Browse Portfolio</p></fp-button>
+      <fp-button [type]="'submit'" (onClicked)="navigateProducts()"><p>View Products</p></fp-button>
+      <fp-button [type]="'submit'" (onClicked)="navigatePortfolio()"><p>Browse Portfolio</p></fp-button>
     </div>
   </div>
 </div>
+
+<!-- Social links -->
+<div class="fixed bottom-1 right-1 md:bottom-5 md:right-5 shadow-md">
+  <fp-button [type]="'submit'" (onClicked)="socialMediaModal.open()"><p>Follow us on social media!</p></fp-button>
+</div>
+
+<fp-modal #socialMediaModal>
+  <h1 class="font-stifly text-3xl text-center">Connect with us!</h1>
+  <p class="text-center">Follow us on these platforms to stay up to date on everything we're up to!</p>
+
+  <div class="m-3 w-fit mx-auto">
+    <a
+      class="inline-block w-fit text-center p-5 rounded-md cursor-pointer bg-white hover:brightness-90 active:brightness-75 focus:outline-fp-ui-focus-outline focus:outline-2"
+      href="https://www.instagram.com/faepoint.software/"
+      target="_blank">
+      <i class="text-3xl fa-brands fa-instagram"></i>
+      <p class="text-sm font-bold">Instagram</p>
+    </a>
+
+    <a
+      class="inline-block w-fit text-center p-5 rounded-md cursor-pointer bg-white hover:brightness-90 active:brightness-75 focus:outline-fp-ui-focus-outline focus:outline-2"
+      href="https://bsky.app/profile/faepoint.com"
+      target="_blank">
+      <i class="text-3xl fa-brands fa-bluesky"></i>
+      <p class="text-sm font-bold">Bluesky</p>
+    </a>
+  </div>
+</fp-modal>
