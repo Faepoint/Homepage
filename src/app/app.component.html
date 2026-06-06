@@ -6,47 +6,63 @@
       alt="A silhouette of an elf ear with the word Faepoint." />
   </a>
   <div class="flex-auto"></div>
-  <div class="self-center relative">
-    <button
-      role="navigation"
-      class="p-2 hover:cursor-pointer hover:text-green hover:underline active:outline active:outline-dashed active:outline-green"
-      (click)="siteMenu.showMenu()">
-      <div class="flex">
-        <i class="self-center h-6 w-6 text-2xl mr-2 fa-solid fa-bars"></i>
-        <h1 class="self-center text-xl font-spartan font-bold">Menu</h1>
-      </div>
-    </button>
-    <fp-pop-menu #siteMenu [closeOnClick]="true">
-      <ul class="font-spartan font-bold text-xl">
-        <li
-          class="px-3 py-2 hover:underline hover:text-green hover:cursor-pointer active:outline active:outline-dashed active:outline-green"
-          [routerLink]="['/']"
-          role="menuitem">
-          Home
-        </li>
-        <li
-          class="px-3 py-2 hover:underline hover:text-green hover:cursor-pointer active:outline active:outline-dashed active:outline-green"
-          [routerLink]="['/portfolio']"
-          role="menuitem">
-          Portfolio
-        </li>
-        <li
-          class="px-3 py-2 hover:underline hover:text-green hover:cursor-pointer active:outline active:outline-dashed active:outline-green"
-          [routerLink]="['/products']"
-          role="menuitem">
-          Products
-        </li>
-        <li
-          class="px-3 py-2 hover:underline hover:text-green hover:cursor-pointer active:outline active:outline-dashed active:outline-green"
-          [routerLink]="['/contact']"
-          role="menuitem">
-          Contact
-        </li>
-      </ul>
-    </fp-pop-menu>
-  </div>
+  @if (isMobile()) {
+    <div class="self-center relative">
+      <button
+        role="navigation"
+        class="p-2 hover:cursor-pointer hover:text-green hover:underline active:outline active:outline-dashed active:outline-green"
+        (click)="siteMenu.showMenu()">
+        <div class="flex">
+          <i class="self-center h-6 w-6 text-2xl mr-2 fa-solid fa-bars"></i>
+          <h1 class="self-center text-xl font-spartan font-bold">Menu</h1>
+        </div>
+      </button>
+      <fp-pop-menu #siteMenu [closeOnClick]="true">
+        <ng-container [ngTemplateOutlet]="navLinks"></ng-container>
+      </fp-pop-menu>
+    </div>
+  } @else {
+    <ng-container [ngTemplateOutlet]="navLinks"></ng-container>
+  }
 </nav>
 
 <router-outlet></router-outlet>
 
 <fp-footer classes="bg-purple text-timberwolf"></fp-footer>
+
+<ng-template #navLinks>
+  <ul [class]="'font-spartan font-bold text-xl' + ' ' + (!isMobile() ? 'flex' : '')">
+    <li class="self-center">
+      <a fp class="" [routerLink]="['/']">
+        <div class="flex px-2 py-1">
+          <i class="self-center mr-2 md:mr-1 block fa-regular fa-house"></i>
+          <p class="self-center">Home</p>
+        </div>
+      </a>
+    </li>
+    <li class="self-center">
+      <a fp [routerLink]="['/portfolio']">
+        <div class="flex px-2 py-1">
+          <i class="self-center mr-2 md:mr-1 block fa-solid fa-briefcase"></i>
+          <p class="self-center">Portfolio</p>
+        </div>
+      </a>
+    </li>
+    <li class="self-center">
+      <a fp [routerLink]="['/products']">
+        <div class="flex px-2 py-1">
+          <i class="self-center mr-2 md:mr-1 block fa-solid fa-box-open"></i>
+          <p class="self-center">Products</p>
+        </div>
+      </a>
+    </li>
+    <li class="self-center">
+      <a fp [routerLink]="['/contact']">
+        <div class="flex px-2 py-1">
+          <i class="self-center mr-2 md:mr-1 block fa-regular fa-comments"></i>
+          <p class="self-center">Contact</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</ng-template>
