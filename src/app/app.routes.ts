@@ -3,8 +3,7 @@ import { ConstructionComponent } from './components/pages/construction/construct
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { NotFoundComponent } from './components/pages/general/not-found/not-found.component';
 import { HomeComponent } from './components/pages/home/home.component';
-import { PortfolioComponent } from './components/pages/portfolio/portfolio.component';
-import { ProductsComponent } from './components/pages/products/products.component';
+import { PricingComponent } from './components/pages/pricing/pricing.component';
 
 export const routes: Routes = [
   {
@@ -17,21 +16,13 @@ export const routes: Routes = [
     component: ConstructionComponent
   },
   {
-    path: 'portfolio',
-    component: PortfolioComponent
-  },
-  {
-    path: 'products',
-    component: ProductsComponent
-  },
-  {
     path: 'contact',
     component: ContactComponent
   },
-  // {
-  //   path: 'pricing',
-  //   component: PricingComponent
-  // },
+  {
+    path: 'pricing',
+    component: PricingComponent
+  },
   {
     path: '**',
     component: NotFoundComponent

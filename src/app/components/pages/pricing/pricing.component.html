@@ -8,153 +8,144 @@
     &mdash; we don't do hidden fees.
   </p>
 
-  <div class="w-fit ml-auto my-5">
-    <button
-      class="{{
-        selected === 0 ? 'bg-purple text-timberwolf hover:brightness-115 active:brightness-75' : 'bg-black/10 hover:bg-black/5 active:bg-black/15'
-      }} px-3 py-2 rounded-tl-md rounded-bl-md hover:cursor-pointer"
-      (click)="selected = 0">
-      Websites
-    </button>
-    <button
-      class="{{
-        selected === 1 ? 'bg-purple text-timberwolf hover:brightness-115 active:brightness-75' : 'bg-black/10 hover:bg-black/5 active:bg-black/15'
-      }} px-3 py-2 rounded-tr-md rounded-br-md hover:cursor-pointer"
-      (click)="selected = 1">
-      Consulting
-    </button>
-  </div>
+  <fp-segmented-control [value]="selected()" (onChange)="selected.set($event)">
+    <p A>Websites</p>
+    <p B>Consulting</p>
+  </fp-segmented-control>
 
   <!-- Websites -->
-  @if (selected === 0) {
-  <h2 class="font-stifly text-2xl mt-5 text-center">Website Pricing</h2>
-  <p class="text-center mb-2 text-sm">General costs for planning, designing, and building your new website.</p>
+  @if (selected() === 'A') {
+    <h2 class="font-stifly text-3xl mt-5 mb-2 text-center">Website Pricing</h2>
+    <p class="text-center mb-2">General costs for planning, designing, and building your new website.</p>
 
-  <div class="border-2 w-full p-3 rounded-md">
-    <table class="w-full text-center">
-      <thead class="md:text-lg">
-        <tr>
-          <td></td>
-          <td><strong>Template Project</strong></td>
-          <td><strong>Custom Project</strong></td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg"><strong>Setup Charge</strong></td>
-          <td>$75</td>
-          <td>$120</td>
-        </tr>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg"><strong>Domain Cost</strong></td>
-          <td colspan="2" class="text-center">Market ($10 - $50 /year typical)</td>
-        </tr>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg"><strong>Planning & Development</strong></td>
-          <td colspan="2" class="text-center">$30 /hour</td>
-        </tr>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg">
-            <strong>Follow-Up Requests</strong>
-            <span class="text-sm ml-1">(post-completion)</span>
-          </td>
-          <td colspan="2" class="text-center">$35 /hour</td>
-        </tr>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg"><strong>In-Warranty Maintenance</strong></td>
-          <td colspan="2" class="text-center">$0 /hour</td>
-        </tr>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg">
-            <strong>Server Fee</strong>
-            <span class="text-sm ml-1">(if needed)</span>
-          </td>
-          <td colspan="2" class="text-center">$30+ /month</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="border-2 w-full p-3 rounded-md">
+      <table class="w-full text-center">
+        <thead class="md:text-lg">
+          <tr>
+            <td></td>
+            <td><strong>Template Project</strong></td>
+            <td><strong>Custom Project</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg"><strong>Setup Charge</strong></td>
+            <td>$100</td>
+            <td>$150</td>
+          </tr>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg"><strong>Annual Renewal Fee</strong></td>
+            <td colspan="2">$100</td>
+          </tr>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg"><strong>Domain Cost</strong></td>
+            <td colspan="2" class="text-center">Market ($10 - $50 /year typical)</td>
+          </tr>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg"><strong>Planning & Development</strong></td>
+            <td colspan="2" class="text-center">$30 /hour</td>
+          </tr>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg">
+              <strong>Follow-Up Requests</strong>
+              <span class="text-sm ml-1">(post-completion)</span>
+            </td>
+            <td colspan="2" class="text-center">$50 /hour</td>
+          </tr>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg"><strong>In-Warranty Maintenance</strong></td>
+            <td colspan="2" class="text-center">FREE</td>
+          </tr>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg">
+              <strong>Servers & infrastructure</strong>
+            </td>
+            <td colspan="2" class="text-center">Market</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <p class="text-center mt-5 text-sm">Web server costs vary greatly. Contact us for a quote to see if one is needed for your project.</p>
-  </div>
-
-  <h2 class="font-stifly text-2xl mt-10 text-center">Warranty</h2>
-  <p class="text-center text-sm">
-    Every project delivered is backed by the
-    <strong>Faepoint Limited Warranty.</strong>
-    This warranty covers free basic service upkeep and corrections as outlined below:
-  </p>
-
-  <div class="md:flex">
-    <div class="flex-1 self-start p-3 m-1 rounded-md text-timberwolf bg-purple">
-      <h3 class="font-stifly text-xl">First Three Months</h3>
-      <ul class="list-disc list-inside">
-        <li>Mistake Corrections</li>
-        <li>Design Tweaks</li>
-      </ul>
-    </div>
-    <div class="flex-1 self-start p-3 m-1 rounded-md text-timberwolf bg-purple">
-      <h3 class="font-stifly text-xl">First Year</h3>
-      <ul class="list-disc list-inside">
-        <li>Bugs and Security Fixes</li>
-        <li>Software Updates</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="p-3 m-1 rounded-md text-timberwolf bg-purple">
-    <h3 class="font-stifly text-xl">Lifetime</h3>
-    <ul class="list-disc list-inside columns-2">
-      <li>Server Management</li>
-      <li>Support</li>
-    </ul>
-  </div>
-
-  } @else {
-  <h2 class="font-stifly text-2xl mt-5 text-center">Consulting Services</h2>
-  <p class="text-center mb-2 text-sm">Costs for meeting with you and providing advice and recommendations.</p>
-
-  <div class="border-2 w-full p-3 rounded-md">
-    <table class="w-full text-center">
-      <thead class="md:text-lg">
-        <tr>
-          <td></td>
-          <td><strong>Price</strong></td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg"><strong>Flat Fee</strong></td>
-          <td>$100</td>
-        </tr>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg"><strong>Hourly Rate</strong></td>
-          <td colspan="2" class="text-center">$30</td>
-        </tr>
-        <tr class="even:bg-purple/25">
-          <td class="md:text-lg"><strong>Fixing a Vibe-Coded App</strong></td>
-          <td colspan="2" class="text-center">$50 /hour</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="w-fit mx-auto mt-5 text-sm">
-      <p class="underline text-center">Consultations Include:</p>
-      <ul class="font-bold list-inside list-disc columns-2">
-        <li>Security</li>
-        <li>Accessibility</li>
-        <li>Architecture</li>
-        <li>User interface design</li>
-        <li>Layout and structure</li>
-        <li>Development practices</li>
-        <li>Modernization</li>
-      </ul>
+      <p class="text-center mt-5 text-sm">Web server costs vary greatly. Contact us for a quote to see if one is needed for your project.</p>
     </div>
 
-    <p class="text-center mt-5 text-sm">
-      Meet with a real human for advice and recommendations on improvements to your technical application or website. This advice is based on industry
-      standards and guidelines and is backed by 10+ years in the field.
+    <h2 class="font-stifly text-3xl mt-10 mb-2 text-center">Warranty</h2>
+    <p class="text-center mb-2">
+      Every project delivered is backed by the
+      <strong>Faepoint Limited Warranty.</strong>
+      This warranty covers free basic service upkeep and corrections as outlined below:
     </p>
-  </div>
+
+    <div class="md:flex">
+      <div class="flex-1 self-start p-3 m-1 rounded-md text-timberwolf bg-purple">
+        <h3 class="font-stifly text-xl">First Three Months</h3>
+        <ul class="list-disc list-inside">
+          <li>Mistake Corrections</li>
+          <li>Small Design Tweaks</li>
+        </ul>
+      </div>
+      <div class="flex-1 self-start p-3 m-1 rounded-md text-timberwolf bg-purple">
+        <h3 class="font-stifly text-xl">First Year</h3>
+        <ul class="list-disc list-inside">
+          <li>Bugs and Security Fixes</li>
+          <li>Accessibility Improvements</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="p-3 m-1 rounded-md text-timberwolf bg-purple">
+      <h3 class="font-stifly text-xl">Lifetime of your Project</h3>
+      <ul class="list-disc list-inside columns-2">
+        <li>
+          Server Upkeep
+          <span class="text-sm">(if applicable)</span>
+        </li>
+        <li>Platform Support</li>
+        <li>Discount on Future Enhancements</li>
+        <li>Discount on Future Projects</li>
+      </ul>
+    </div>
+  } @else {
+    <h2 class="font-stifly text-3xl mt-5 mb-2 text-center">Consulting Services</h2>
+    <p class="text-center mb-2">Costs for meeting with you and providing advice and recommendations.</p>
+
+    <div class="border-2 w-full p-3 rounded-md">
+      <table class="w-full text-center">
+        <thead class="md:text-lg">
+          <tr>
+            <td></td>
+            <td><strong>Price</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg"><strong>Flat Fee</strong></td>
+            <td>$100</td>
+          </tr>
+          <tr class="even:bg-purple/25">
+            <td class="md:text-lg"><strong>Hourly Rate</strong></td>
+            <td colspan="2" class="text-center">$50</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="w-fit mx-auto mt-5">
+        <p class="underline text-center mb-2">Consultation Specialties Include:</p>
+        <ul class="font-bold list-inside list-disc columns-2">
+          <li>Security</li>
+          <li>Accessibility</li>
+          <li>Architecture</li>
+          <li>User interface design</li>
+          <li>Layout and structure</li>
+          <li>Development practices</li>
+          <li>Modernization</li>
+        </ul>
+      </div>
+
+      <p class="text-center mt-5 text-sm">
+        Meet with a real human for advice and recommendations on improvements to your technical application or website. This advice is based on
+        industry standards and guidelines and is backed by 10+ years in the field.
+      </p>
+    </div>
   }
 
   <h2 class="font-stifly text-2xl mt-10 text-center">Price Disclaimer</h2>

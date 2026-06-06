@@ -1,5 +1,7 @@
-<div class="absolute w-full px-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-  <h1 class="font-stifly text-8xl text-green">404</h1>
-  <p class="font-stifly text-4xl text-offblack mb-5">Your adventures have led you down the wrong path.</p>
-  <fp-button [type]="'submit'" (onClicked)="goHome()"><p>Back to Home</p></fp-button>
+<div class="relative h-[95dvh]">
+  <div class="absolute w-full px-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+    <h1 class="font-stifly text-8xl text-green">404</h1>
+    <p class="font-stifly text-4xl text-offblack mb-5">Your adventures have led you down the wrong path.</p>
+    <fp-button [type]="'submit'" (onClick)="goHome()"><p>Back to Home</p></fp-button>
+  </div>
 </div>
