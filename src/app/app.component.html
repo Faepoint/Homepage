@@ -33,8 +33,8 @@
 <ng-template #navLinks>
   <ul [class]="'font-spartan font-bold text-xl' + ' ' + (!isMobile() ? 'flex' : '')">
     <li class="self-center">
-      <a fp class="" [routerLink]="['/']">
-        <div class="flex px-2 py-1">
+      <a fp [routerLink]="['/']">
+        <div class="flex px-2 py-3">
           <i class="self-center mr-2 md:mr-1 block fa-regular fa-house"></i>
           <p class="self-center">Home</p>
         </div>
@@ -42,7 +42,7 @@
     </li>
     <li class="self-center">
       <a fp [routerLink]="['/contact']">
-        <div class="flex px-2 py-1">
+        <div class="flex px-2 py-3">
           <i class="self-center mr-2 md:mr-1 block fa-regular fa-comments"></i>
           <p class="self-center">Contact</p>
         </div>
