@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "npm run build-css && ng serve",
     "build-css": "tailwindcss -i ./src/tailwind.css -o ./src/generated-tailwind.css --minify",
-    "build": "npm run build-css && ng build -c=production",
+    "build": "npm run build-css && ng build -c=production && npm run organize && npm run ghp404",
+    "organize": "cp -r docs/browser/* docs/ && rm -rf docs/browser docs/3rdpartylicenses.txt docs/prerendered-routes.json",
+    "ghp404": "cp docs/index.html docs/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
