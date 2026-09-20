@@ -1,5 +1,5 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, HostListener, OnInit, signal } from '@angular/core';
+import { afterNextRender, Component, HostListener, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FpAnchorDirective, FpFooter, FpPopMenu } from '@faepoint/fp-uilib';
 
@@ -9,11 +9,13 @@ import { FpAnchorDirective, FpFooter, FpPopMenu } from '@faepoint/fp-uilib';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   isMobile = signal(false);
 
-  ngOnInit(): void {
-    this.isMobile.set(window.innerWidth <= 768);
+  constructor() {
+    afterNextRender(() => {
+      this.isMobile.set(window.innerWidth <= 768);
+    });
   }
 
   @HostListener('window:resize', ['$event'])

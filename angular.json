@@ -26,7 +26,15 @@
             ],
             "scripts": [
               "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
-            ]
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -57,6 +65,22 @@
                 "src/styles.css",
                 "src/tailwind.css"
               ]
+            },
+            "testing": {
+              "aot": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "assets": [
+                "src/assets"
+              ],
+              "styles": [
+                "src/styles.css",
+                "src/generated-tailwind.css"
+              ],
+              "polyfills": [
+                "zone.js",
+                "zone.js/testing"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -80,23 +104,11 @@
           }
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css",
-              "src/generated-tailwind.css"
-            ],
-            "scripts": [
-              "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
-            ]
+            "buildTarget": ":build:testing",
+            "runner": "vitest"
           }
         }
       }
